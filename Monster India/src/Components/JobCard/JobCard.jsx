@@ -18,7 +18,7 @@ export function JobCard() {
             {
                 jobs.jobs?.map((item) => {
                     return (
-                        <div className={styles.cardDiv} key={item.job_id}>
+                        <div className={styles.cardDiv}>
                             <Card jobs = {item}/>
                             <Footer jobs={item} />
                         </div>

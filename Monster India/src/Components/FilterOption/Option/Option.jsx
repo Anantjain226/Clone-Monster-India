@@ -1,9 +1,9 @@
 import React from "react";
 
-function Option({ label, handleChange, name,  }) {
+function Option({ label, handleChange }) {
   return (
     <div>
-       <input name={name} type="checkbox" value={label} onChange={(event) => handleChange(event)} />
+       <input type="checkbox" value={label} onChange={(event) => handleChange(event)} />
        <label> {label} </label>
     </div>
   );

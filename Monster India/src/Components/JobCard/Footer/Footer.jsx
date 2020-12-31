@@ -2,18 +2,25 @@ import React from 'react'
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import ShareIcon from '@material-ui/icons/Share';
 import styles from '../style.module.css';
+import { useHistory } from 'react-router-dom';
 
 export function Footer({jobs}) {
-    // console.log( jobs )
+    const history = useHistory()
+
+    const handleClick = () => {
+        const id = jobs.job_id
+        history.push(`applied/${id}`)
+    }
+
     return (
         <div className={styles.footerWrapper}>
             <div className={styles.left}>
                 Posted: {jobs.posted} days ago
             </div>
             <div className={styles.right}>
-                <StarBorderIcon style={{ color: "#9B9B9B"}}/>
-                <ShareIcon style={{ color: "#9B9B9B"}}/>
-                <button>APPLY</button>
+                <StarBorderIcon style={{ color: "#9B9B9B", margin: "10px 10px 0px 0px"}}/>
+                <ShareIcon style={{ color: "#9B9B9B",  margin: "10px 10px 0px 0px"}}/>
+                <button onClick = {() => handleClick(jobs.job_id)} >APPLY</button>
             </div>
         </div>
     )
