@@ -66,7 +66,7 @@ function JobPage(props) {
       </div>
 
       <div>
-        <span style = {{fontSize: 15, marginLeft: -880, marginLeft: -860}} >
+        <span style = {{fontSize: 15, marginLeft: -780}} >
           <span>PostedOn:{props.data.posted} | </span>
           <span>Total Views: {props.data.total_views} | </span>
           <span>Total Application: {props.data.total_applicants} | </span>

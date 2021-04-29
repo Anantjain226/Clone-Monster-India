@@ -1,6 +1,7 @@
 .wrapper {
     width: 700px;
     text-align: left;
+    cursor: pointer;
 }
 
 .main {

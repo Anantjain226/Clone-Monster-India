@@ -25,7 +25,7 @@ export const getJobData = () => dispatch => {
     dispatch( getJobRequest() )
     let config = {
         method: 'GET',
-        url: 'http://localhost:3004/data',
+        url: 'https://json-server-monster-india-1.herokuapp.com/data',
     }
     return axios( config )
     .then( res => {

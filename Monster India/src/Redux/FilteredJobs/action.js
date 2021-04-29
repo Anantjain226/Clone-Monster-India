@@ -92,7 +92,7 @@ export const getFilteredJobData = (params) => dispatch => {
     dispatch( getFilteredJobRequest() )
     let config = {
         method: 'GET',
-        url: 'http://localhost:3004/data',
+        url: 'https://json-server-monster-india-1.herokuapp.com/data',
         params: {
             location: loc,
             experience: exp,
