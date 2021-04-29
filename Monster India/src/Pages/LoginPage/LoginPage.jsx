@@ -100,6 +100,7 @@ export default function Login() {
               </Typography>
               <form className={classes.form} noValidate>
                 <TextField
+                  placeholder=  "admin"
                   variant="outlined"
                   margin="normal"
                   required
@@ -112,11 +113,11 @@ export default function Login() {
                   autoFocus
                 />
                 <TextField
+                  placeholder=  "admin"
                   variant="outlined"
                   margin="normal"
                   required
                   fullWidth
-                  name="password"
                   label="Password"
                   type="password"
                   id="password"

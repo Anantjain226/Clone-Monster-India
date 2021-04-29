@@ -10,11 +10,11 @@ const SuggestionBox = styled.div`
     & * {
         position: relative;
         width: 360px;
-        padding: 5px;
-        height: 20px;
+        height: 40px;
         backgroundColor: white;
-        padding: 8px;
-        border-bottom: 0.5px solid lightgrey
+        padding: 5px;
+        border-bottom: 0.5px solid lightgrey;
+        margin-left: 5px;
     }
     & :nth-child(${({active}) => active}){
         background: #F8F8F8;
@@ -81,7 +81,7 @@ const JobSearchFirst = () => {
                 value = {keyword} 
                 onChange = {(e) => setKeyword(e.target.value)} 
                 placeholder = "Keyword" 
-                style = {{height: 35, width: 700, outline: "none", marginBottom: 20, border: "2px solid lightgrey", padding: 5, color: "darkgrey"}}
+                style = {{height: 35, width: 700, outline: "none", marginBottom: 20, border: "2px solid lightgrey", padding: 5, color: "grey"}}
             />
             <SuggestionBox style = {{maxHeight: 130, overflow: "scroll", position: "absolute", textAlign: "left", marginTop: -20, width: 710, background: "white", marginLeft: 5}} active = {active} >
             {
@@ -89,7 +89,7 @@ const JobSearchFirst = () => {
             }
             </SuggestionBox>
             <br />
-            <select style = {{outline: "none", width: 350, height:  32, marginBottom: 20, border: "2px solid lightgrey", padding: 5,  color: "darkgrey"}} value = {experience} onChange = {(e) => setExperience(e.target.value)} >
+            <select style = {{outline: "none", width: 350, height:  32, marginBottom: 20, border: "2px solid lightgrey", padding: 5,  color: "grey"}} value = {experience} onChange = {(e) => setExperience(e.target.value)} >
             <option selected disabled value = "" hidden > Experience </option>
                         <option value = "0 - 1 Years" > 0 - 1 Years </option>
                         <option value = "1 - 2 Years" > 1 - 2 Years </option>
@@ -97,13 +97,13 @@ const JobSearchFirst = () => {
                         <option value = "5 - 7 Years" > 5 - 7 Years </option>
                         <option value = "7 - 10 Years" > 7 - 10 Years </option>
             </select>
-            <input placeholder = "Location" style = {{outline: "none", width: 350, height: 32, border: "2px solid lightgrey", padding: 5,  color: "darkgrey"}} value= {location} onChange = {(e) => setLocation(e.target.value)} />
-            <SuggestionBox style = {{maxHeight: 130, overflow: "scroll", position: "absolute", marginLeft: 350, marginTop: -20, width: 360, background: "white"}} active = {active} >
+            <input placeholder = "Location" style = {{outline: "none", width: 350, height: 32, border: "2px solid lightgrey", padding: 5,  color: "grey"}} value= {location} onChange = {(e) => setLocation(e.target.value)} />
+            {/* <SuggestionBox style = {{maxHeight: 130, overflow: "scroll", position: "absolute", marginLeft: 350, marginTop: -20, width: 360, background: "white"}} active = {active} >
             {
                 locationSuggestion && locationSuggestion.map((item, index) => <div onMouseOver = {() => setActive(index+1)} key = {item.job_id} onClick = {() => locationClick(item.location)} > {item.location} </div>)
             }
-            </SuggestionBox>
-            <select style = {{height: 45,outline: "none",  width: 700, marginBottom: 20, border: "2px solid lightgrey", padding: 5,  color: "darkgrey", zIndex: 0}} value = {industry} onChange = {(e) => setIndustry(e.target.value)} >
+            </SuggestionBox> */}
+            <select style = {{height: 45,outline: "none",  width: 700, marginBottom: 20, border: "2px solid lightgrey", padding: 5,  color: "grey", zIndex: 0}} value = {industry} onChange = {(e) => setIndustry(e.target.value)} >
                 <option disabled selected value = "" hidden >Industry</option>
                 <option value = "Software" > Software </option>
                 <option value = "Banking" > Banking </option>
@@ -111,7 +111,7 @@ const JobSearchFirst = () => {
                 <option value = "Recruitment" > Recruitment </option>
                 <option value = "E-Commerce" > E-Commerce </option>
             </select>
-            <select style = {{height: 45, outline: "none", width: 700, marginBottom: 20, border: "2px solid lightgrey", padding: 5,  color: "darkgrey", zIndex: 0}} value = {functions} onChange = {(e) => setFunctions(e.target.value)} >
+            <select style = {{height: 45, outline: "none", width: 700, marginBottom: 20, border: "2px solid lightgrey", padding: 5,  color: "grey", zIndex: 0}} value = {functions} onChange = {(e) => setFunctions(e.target.value)} >
                 <option disabled selected value = "" hidden >Function</option>
                 <option value = "IT" > IT </option>
                 <option value = "Manufacturing/Engineering" > Manufacturing/Engineering </option>
@@ -119,7 +119,7 @@ const JobSearchFirst = () => {
                 <option value = "Advertising" > Advertising </option>
                 <option value = "Team Leader/Technical Leader" > Team Leader/Technical Leader </option>
             </select>
-            <select style = {{height: 45, outline: "none", width: 700, marginBottom: 20, border: "2px solid lightgrey", padding: 5,  color: "darkgrey", zIndex: 0}} value = {role} onChange = {(e) => setRoles(e.target.value)} >
+            <select style = {{height: 45, outline: "none", width: 700, marginBottom: 20, border: "2px solid lightgrey", padding: 5,  color: "grey", zIndex: 0}} value = {role} onChange = {(e) => setRoles(e.target.value)} >
                 <option disabled selected value = "" hidden >Role</option>
                 <option value = "Software Engineer/Programmer" > Software Engineer/Programmer </option>
                 <option value = "Application Designer Specialist" > Application Designer Specialist </option>

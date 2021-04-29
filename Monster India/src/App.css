@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+.App button{
+  cursor: pointer;
+}
+
 body{
   background-color: rgb(240, 239, 239);
 }

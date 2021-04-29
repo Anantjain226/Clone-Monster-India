@@ -22,7 +22,7 @@ export const MainPageSearch = () => {
             <div style = {{display: "flex", justifyContent: "space-evenly"}} >
             <div >
                <CompanyCarousel breakPoints = {breakPoints} />
-                <CarouselContainer breakPoints = {breakPoints}  />
+                {/* <CarouselContainer breakPoints = {breakPoints}  /> */}
                 <RecentJobsCarousel breakPoints = {breakPoints} />
                 <WalkInJobCarousel breakPoints = {breakPoints}/>
                 
